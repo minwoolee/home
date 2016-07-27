@@ -1,0 +1,11 @@
+# Ignore everything
+*
+
+# Except...
+!.vimrc
+!.vim
+!.bashrc
+!.bash_profile
+!.tmux.conf
+!.screenrc
+!.gitignore
