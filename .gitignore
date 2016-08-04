@@ -4,6 +4,7 @@
 # Except...
 !.vimrc
 !.vim
+!.vim/**
 !.bashrc
 !.bash_profile
 !.tmux.conf

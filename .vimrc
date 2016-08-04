@@ -114,6 +114,11 @@ nnoremap gR gD:%s/<C-R>///gc<left><left><left>
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
+" let g:ctrlp_user_command = 'find %s -type f'
+let g:ctrlp_user_command = ['.git/', 'git ls-files --cached --others  --exclude-standard %s']
+nnoremap <silent> <leader>t :CtrlPTag<CR>
+nnoremap <silent> <leader>T :CtrlPBufTagAll<CR>
+nnoremap <silent> <leader>b :CtrlPBuffer<CR>
 
 " wildmenu
 set wildchar=<Tab> wildmenu wildmode=full
