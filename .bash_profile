@@ -79,4 +79,4 @@ export HISTTIMEFORMAT="%d/%m/%y %T "
 stty -ixon -ixoff
 
 # git completion
-source ~/git-completion.bash
+# source ~/git-completion.bash

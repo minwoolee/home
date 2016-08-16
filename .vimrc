@@ -79,7 +79,7 @@ filetype plugin indent on
 
 " color
 set background=light
-colorscheme solarized
+" colorscheme solarized
 
 " from https://github.com/spf13/spf13-vim/blob/master/.vimrc
 if has('statusline')
