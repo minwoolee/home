@@ -45,9 +45,10 @@ set hidden
 " show status lines
 " set laststatus=2
 " set statusline
-"set statusline=%-10.3n
+" set statusline=%-10.3n
 " mark wrapped lines
 set showbreak=>
+set wrap
 
 set tags=tags
 
@@ -65,6 +66,7 @@ endif
 :nmap <leader>l :setlocal number!<CR>
 :nmap <leader>q :nohlsearch<CR>
 :nmap <leader>ne :NERDTreeToggle<CR>
+:nmap <leader>u :UndotreeToggle<CR>
 :nmap <Up> gk
 :nmap <Down> gj
 
@@ -79,23 +81,7 @@ filetype plugin indent on
 
 " color
 set background=light
-" colorscheme solarized
-
-" from https://github.com/spf13/spf13-vim/blob/master/.vimrc
-if has('statusline')
-"     set laststatus=2
-"     " Broken down into easily includeable segments
-"     set statusline=%<%f\    " Filename
-"     set statusline+=%w%h%m%r " Options
-    set statusline+=%{fugitive#statusline()} "  Git Hotness
-"     set statusline+=\ [%{&ff}/%Y]            " filetype
-"     set statusline+=\ [%{getcwd()}]          " current dir
-"     set statusline+=%#warningmsg#
-" "    set statusline+=%{SyntasticStatuslineFlag()}
-"     set statusline+=%*
-"     let g:syntastic_enable_signs=1
-"     set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
-endif
+colorscheme solarized
 
 " For local replace
 nnoremap gr gd[{V%::s/<C-R>///gc<left><left><left>
@@ -136,3 +122,16 @@ autocmd User fugitive
 :noremap <C-k> <C-w>k
 :noremap <C-h> <C-w>h
 :noremap <C-l> <C-w>l
+
+" easier <Esc>
+:imap jk <Esc>
+
+" -- syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
