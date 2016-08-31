@@ -1,0 +1,24 @@
+[alias]
+	st = status
+	br = branch
+	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+	co = checkout
+	ci = commit
+[user]
+	email = mwlee@yahoo-inc.com
+	name = Min Lee
+[color]
+	status = auto
+	branch = auto
+	interactive = auto
+	diff = auto
+[gitopen "gitlab"]
+	domain = git.corp.yahoo.com
+[push]
+	default = simple
+[core]
+	excludesfile = /Users/mwlee/.gitignore_global
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true

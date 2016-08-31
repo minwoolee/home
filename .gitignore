@@ -10,3 +10,6 @@
 !.tmux.conf
 !.screenrc
 !.gitignore
+!.gitconfig
+
+.DS_Store

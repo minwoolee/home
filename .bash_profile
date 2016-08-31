@@ -22,6 +22,8 @@ export LESS="eFRX"
 export LEGO_SRC_ROOT=/homes/mwlee/lego
 #export DISPLAY=`who -m|awk '{print $6}'|tr -d \(|tr -d \)`:0.0
 #export GEM_PATH=/Library/Ruby/Gems/2.0.0
+export GEM_PATH=/usr/local:$GEM_PATH
+export GEM_HOME=/usr/local:$GEM_HOME
 
 #alias ssh="yssh" 
 #alias scp="yscp"

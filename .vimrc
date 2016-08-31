@@ -97,14 +97,14 @@ nnoremap gR gD:%s/<C-R>///gc<left><left><left>
 " let g:CommandTSuppressMaxFilesWarning=1
 
 " CtrlP settings
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_working_path_mode = 'ra'
-" let g:ctrlp_user_command = 'find %s -type f'
-let g:ctrlp_user_command = ['.git/', 'git ls-files --cached --others  --exclude-standard %s']
-nnoremap <silent> <leader>t :CtrlPTag<CR>
-nnoremap <silent> <leader>T :CtrlPBufTagAll<CR>
-nnoremap <silent> <leader>b :CtrlPBuffer<CR>
+" let g:ctrlp_map = '<c-p>'
+" let g:ctrlp_cmd = 'CtrlP'
+" let g:ctrlp_working_path_mode = 'ra'
+" " let g:ctrlp_user_command = 'find %s -type f'
+" let g:ctrlp_user_command = ['.git/', 'git ls-files --cached --others  --exclude-standard %s']
+" nnoremap <silent> <leader>t :CtrlPTag<CR>
+" nnoremap <silent> <leader>T :CtrlPBufTagAll<CR>
+" nnoremap <silent> <leader>b :CtrlPBuffer<CR>
 
 " wildmenu
 set wildchar=<Tab> wildmenu wildmode=full
@@ -135,3 +135,14 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+" Other plugins
+call plug#begin('~/.vim/plugged')
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+
+call plug#end()
+
+" fzf settings
+:noremap <C-p> :Files<CR>
+nnoremap <silent> <leader>b :Buffers<CR>
